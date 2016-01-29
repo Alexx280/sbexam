@@ -43,6 +43,7 @@ include_once 'head_edu.tpl';
             <button type="button" class="btn btn-info btn-lg btn3d "><span class="glyphicon glyphicon-question-sign"></span> Info</button>
         </a>
     </div>
+    test
     <img src="pic/arrow_top.png" id="arrow">
     <div id="comment0"> Рекомендуем </div>-->
 
