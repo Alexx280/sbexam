@@ -45,47 +45,64 @@ else {};
 
 $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10),0 ,-2);
 
-if ($zachet > 7) {
-    $zachet_ok="UPDATE `lama` SET `zachet` = 'Зачёт' WHERE `lama_id`=".$_SESSION['lama_id'];
-    $res = $link->query($zachet_ok);
-    $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
-    $res = $link->query($code);
-    echo ("<div id='centr-q'><div id='quest' ><p class='tc'>Поздравляем, ".$row['name']." ".$row['father_name'].",</br> вы сдали зачёт! <br>
-    </p><center><img src='pic/test_ok1.png'></center>
-    <p class='ti'> Ваш профиль будет настроен в течении 4 часов, <br>
-    права и программное обеспечение в соответствии с заявкой в Итилиуме. <br>
-    Ваши имя и пароль доступа будут отправлены <br> Вашему руководителю (инициатору заявки) на почту.</p></div></div>".$d);
-    unset ($_SESSION['lama_id']);
-    }
-else {
-    if ($row['try']==0) {
-        $try="UPDATE `lama` SET `try` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-        $res = $link->query($try);
-        $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
-        $res = $link->query($code);
-        echo ("<div id='centr-q'><div id='quest' style='height: 450px; '> <p class='tc'>".$row['name']." ".$row['father_name'].", вы не верно ответили на вопросы, <br/> можете попробовать ещё раз.  " .$d."</p><center><img src='pic/test_one.png'></center> Ваши ошибки в следующих разделах:<br/> <br/>".
-        $osh.". ". "<br/>
-         <form  action='1.php'>
-        <center><input type='submit' value='Ещё раз' class='table-form'/></center>
-        </form>
-        <br/>
-        <form  action='index.php'>
-        <center><input type='submit' value='Я сдам в другой раз' class='table-form' /></center>
-        </form></br>
-        <form  action='curs_edu01.php'>
-        <center><input type='submit' value='Прочитать инструкции' class='table-form' /></center>
-        </form>
+    if ($zachet > 7) {
+        if($row['login']!== NULL) {
+            $zachet_ok = "UPDATE `lama` SET `zachet` = 'Зачёт' WHERE `lama_id`=" . $_SESSION['lama_id'];
+            $res = $link->query($zachet_ok);
+            $code = "UPDATE `lama` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['lama_id'];
+            $res = $link->query($code);
+            echo("<div id='centr-q'><div id='quest' ><p class='tc'>Поздравляем, " . $row['name'] . " " . $row['father_name'] . ",</br> вы сдали зачёт! <br>
+            </p><center><img src='pic/test_ok1.png'></center>
+            <p class='ti'> Вашь профиль настроен. </br>
+            Для входа на компьютер используйте Имя пользователя: '".$row['login']." ', <br>
+            временный пароль для первого входа: ".$row['password']."
+            </p></div></div>" . $d);
+                unset ($_SESSION['lama_id']);
+        }
+        else {
+            $zachet_ok = "UPDATE `lama` SET `zachet` = 'Зачёт' WHERE `lama_id`=" . $_SESSION['lama_id'];
+            $res = $link->query($zachet_ok);
+            $code = "UPDATE `lama` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['lama_id'];
+            $res = $link->query($code);
+            echo("<div id='centr-q'><div id='quest' ><p class='tc'>Поздравляем, " . $row['name'] . " " . $row['father_name'] . ",</br> вы сдали зачёт! <br>
+            </p><center><img src='pic/test_ok1.png'></center>
+            <p class='ti'> Ваш профиль будет настроен в течении 4 часов, <br>
+            права и программное обеспечение в соответствии с заявкой в Итилиуме. <br>
+            Ваши имя и пароль доступа будут отправлены <br> Вашему руководителю (инициатору заявки) на почту.</p></div></div>" . $d);
+            unset ($_SESSION['lama_id']);
+        }
 
-        </div> </div> ");}
+    }
     else {
-        $try="UPDATE `lama` SET `try` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-        $res = $link->query($try);
-        $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
-        $res = $link->query($code);
-        echo ("<div id='centr-q'><div id='quest' > <p class='tc'>".$row['name']." ".$row['father_name'].",  к сожалению вы не сдали зачёт.  " .$d."</p><center><img src='pic/test_out.png'></center>  <br/> Повторите следующие темы:<br/> <br/>".
-            $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br/></div> </div>");
-        unset ($_SESSION['lama_id']);
-    };
-}
+        if ($row['try']==0) {
+            $try="UPDATE `lama` SET `try` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
+            $res = $link->query($try);
+            $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
+            $res = $link->query($code);
+            echo ("<div id='centr-q'><div id='quest' style='height: 450px; '> <p class='tc'>".$row['name']." ".$row['father_name'].", вы не верно ответили на вопросы, <br/> можете попробовать ещё раз.  " .$d."</p><center><img src='pic/test_one.png'></center> Ваши ошибки в следующих разделах:<br/> <br/>".
+            $osh.". ". "<br/>
+             <form  action='1.php'>
+            <center><input type='submit' value='Ещё раз' class='table-form'/></center>
+            </form>
+            <br/>
+            <form  action='index.php'>
+            <center><input type='submit' value='Я сдам в другой раз' class='table-form' /></center>
+            </form></br>
+            <form  action='curs_edu01.php'>
+            <center><input type='submit' value='Прочитать инструкции' class='table-form' /></center>
+            </form>
+
+            </div> </div> ");
+        }
+        else {
+            $try="UPDATE `lama` SET `try` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
+            $res = $link->query($try);
+            $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
+            $res = $link->query($code);
+            echo ("<div id='centr-q'><div id='quest' > <p class='tc'>".$row['name']." ".$row['father_name'].",  к сожалению вы не сдали зачёт.  " .$d."</p><center><img src='pic/test_out.png'></center>  <br/> Повторите следующие темы:<br/> <br/>".
+                $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br/></div> </div>");
+            unset ($_SESSION['lama_id']);
+        };
+    }
 
 ?>
