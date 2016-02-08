@@ -35,8 +35,8 @@ if (isset($_SESSION['lama_id'])){
                 <form method="post" action="1.php">
                     <input type="submit" value="Вперёд" class="table-form"/>
                 </form><br>
-                <form method="post" action="test.php"></p>
-                    <input type="submit" value="Я не готов" class="table-form" />
+                <form method="post" action="curs_edu19.php"></p>
+                    <input type="submit" value="Почитать инструкции" class="table-form" />
                 </form>
             </div>
         </div>

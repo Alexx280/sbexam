@@ -56,6 +56,7 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10),0 ,-2);
             <p class='ti'> Вашь профиль настроен. </br>
             Для входа на компьютер используйте Имя пользователя: '".$row['login']." ', <br>
             временный пароль для первого входа: ".$row['password']."
+            При отсутствии доступа обращайтесь к администраторам сети по тел. 1282 или 1244
             </p></div></div>" . $d);
                 unset ($_SESSION['lama_id']);
         }
@@ -100,7 +101,11 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10),0 ,-2);
             $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
             $res = $link->query($code);
             echo ("<div id='centr-q'><div id='quest' > <p class='tc'>".$row['name']." ".$row['father_name'].",  к сожалению вы не сдали зачёт.  " .$d."</p><center><img src='pic/test_out.png'></center>  <br/> Повторите следующие темы:<br/> <br/>".
-                $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br/></div> </div>");
+                $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br/>
+                <form  action='curs_edu01.php'>
+            <center><input type='submit' value='Прочитать инструкции' class='table-form' /></center>
+            </form>
+            </div> </div>");
             unset ($_SESSION['lama_id']);
         };
     }
