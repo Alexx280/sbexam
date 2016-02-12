@@ -28,7 +28,7 @@ include_once 'head_edu.tpl';
     <img src="pic/cad.png" class="animated fadeInLeft leftimg1 delay1">
     <p class="animated bounceInUp delay1">
     При истечении срока действия пароля следует нажать клавиши "Ctrl"+"Alt"+"Delete" ввести старый пароль и два раза новый.<br>
-    При утрате (забывании) пароля следует обратится к системным администраторам по внутреннему номеру телефона: 1334 или 1282</p>
+    <br></p>
 
 
     <div class="butt1">
