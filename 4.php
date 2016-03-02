@@ -49,7 +49,7 @@ $res = $link->query($q04);
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
             </form>
 
-        <div class="strings"><p>4/9</p></div>
+        <div class="strings"><p>4/10</p></div>
     </div>
     </div>
   <!--  <a href="5.php">

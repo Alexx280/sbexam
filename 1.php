@@ -36,7 +36,7 @@ include_once "funk.php";
              <br>
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
         </form>
-        <div class="strings"><p>1/9</p></div>
+        <div class="strings"><p>1/10</p></div>
         <!--<div class="progress top-bar" >
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="10" style="width:12.5%">
                 12.5%

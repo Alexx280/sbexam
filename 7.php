@@ -41,7 +41,7 @@ $res = $link->query($q07);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>7/9</p></div>
+        <div class="strings"><p>7/10</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

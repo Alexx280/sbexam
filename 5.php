@@ -45,7 +45,7 @@ $res = $link->query($q05);
 
     </form>
 
-    <div class="strings"><p>5/9</p></div>
+    <div class="strings"><p>5/10</p></div>
 </div>
 </div>
 <!--<a href="6.php">
