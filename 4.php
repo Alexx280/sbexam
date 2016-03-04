@@ -33,7 +33,7 @@ $res = $link->query($q04);
             <input id="in2" class="checkbox" type="checkbox" name="inet2" value="0" />
             <label for="in2">Могу загружать из интернет программное обеспечение необходимое мне для работы</label> <br>
             <input id="in3" class="checkbox" type="checkbox" name="inet3" value="1" />
-            <label for="in3">Могу использовать общие папки сервера и почту для передачи рабочих файлов сотрудникам организации </label> <br>
+            <label for="in3">Могу использовать общие папки сервера и почту для передачи рабочих файлов сотрудникам <br>организации </label> <br>
             <input id="in4" class="checkbox" type="checkbox" name="inet4" value="0" />
             <label for="in4">Могу дать возможность коллеге скачать из интернета необходимую информацию, без моего участия </label> <br>
             <input id="in5" class="checkbox" type="checkbox" name="inet5" value="0" />
@@ -41,7 +41,7 @@ $res = $link->query($q04);
             <input id="in6" class="checkbox" type="checkbox" name="inet6" value="0" />
             <label for="in6">Могу  хранить рабочую информацию на сайтах с сервисом передачи и хранения информации</label> <br>
             <input id="in7" class="checkbox" type="checkbox" name="inet7" value="1" />
-            <label for="in7">Могу хранить рабочую информацию только в папке отдела на сервере организации либо на своём рабочем компьютере</label> <br>
+            <label for="in7">Могу хранить рабочую информацию только в папке отдела на сервере организации либо на <br>своём рабочем компьютере</label> <br>
             <br />
             <br />
             <br />

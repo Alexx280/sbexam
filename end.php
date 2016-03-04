@@ -29,6 +29,43 @@ $res = $link->query($q10);*/
 $login= "SELECT * FROM `lama` WHERE lama_id= '".$_SESSION['lama_id']."'";
 $res = $link->query($login) ;
 $row = $res->fetch_assoc();
+/*Проверка введённого пороля на соответстие*/
+$password = str_split($row['see']);
+$spisok_cif="1234567890";
+$chisla=0;
+$simvoly=0;
+$kiril=0;
+$spisok_sim="~!@#$%^&*()_+|<>,./?\"\';:";
+$spisok_kir="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM";
+$spisok_cif_array = str_split($spisok_sim);
+$spisok_sim_array = str_split($spisok_sim);
+$spisok_kir_array = str_split($spisok_kir);
+for ($i = 1; $i <= 10; $i++) {
+    if (in_array($spisok_cif_array[$i], $password)) {
+        $chisla=$chisla+1;
+       // echo "Нашёл".$spisok_cif_array[$i];
+    }
+}
+for ($i = 1; $i <= 24; $i++) {
+    if (in_array($spisok_sim_array[$i], $password)) {
+        $simvoly=$simvoly+1;
+       // echo "Нашёл".$spisok_sim_array[$i];
+    }
+}
+for ($i = 1; $i <= 52; $i++) {
+    if (in_array($spisok_kir_array[$i], $password)) {
+        $kiril=$kiril+1;
+        //echo "Нашёл".$spisok_kir_array[$i];
+    }
+}
+$pass=0;
+if($chisla >0 && $simvoly>0 && $kiril>0 && count($password)>7){$pass =1;}else{};
+echo "Pass=".$pass."вот";
+
+/* Конец Проверка введённого пороля на соответстие*/
+
+
+/*Проверка правильности ответов о регламентирующих документах*/
 if($row['law1']=='Да' && $row['law2']=='Да' && $row['law3']=='Да' && $row['law4']=='Да') {
     $q11="UPDATE `lama` SET `quest_10` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
 }
@@ -37,15 +74,18 @@ else
     $q11="UPDATE `lama` SET `quest_10` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
 }
 $res = $link->query($q11);
+/* Конец Проверка правильности ответов о регламентирующих документах*/
 
 $login= "SELECT * FROM `lama` WHERE lama_id= '".$_SESSION['lama_id']."'";
 $res = $link->query($login) ;
 $row = $res->fetch_assoc();
+/*Подсчёт правильных ответов*/
 
-$zachet = $row['quest_01']+$row['quest_02']+$row['quest_03']+$row['quest_04']+$row['quest_05']+
+$zachet = $row['quest_01']+$row['quest_02']+$pass+$row['quest_03']+$row['quest_04']+$row['quest_05']+
           $row['quest_06']+$row['quest_07']+$row['quest_08']+$row['quest_09']+$row['quest_12']+$row['quest_10'];
+/*Конец Подсчёт правильных ответов*/
 
-if ($row['quest_01']==0 || $row['quest_02']==0 ){$ssd1='Требования к паролю, ';}
+if ($row['quest_01']==0 || $row['quest_02']==0 || $pass==0){$ssd1='Требования к паролю, ';}
 else {};
 if ($row['quest_03']==0){$ssd3='Использование электронной почты, ';}
 else {};
@@ -68,7 +108,7 @@ else {};
 
 $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10.$ssd11),0 ,-2);
 
-    if ($zachet > 7) {
+    if ($zachet > 8) {
         if($row['login']!== NULL) {
             $zachet_ok = "UPDATE `lama` SET `zachet` = 'Зачёт' WHERE `lama_id`=" . $_SESSION['lama_id'];
             $res = $link->query($zachet_ok);
@@ -124,7 +164,7 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10.$ssd11),0 ,-
             $code="UPDATE `lama` SET `code` = '".rand(1000,9999)."' WHERE `lama_id`=".$_SESSION['lama_id'];
             $res = $link->query($code);
             echo ("<div id='centr-q'><div id='quest' > <p class='tc'>".$row['name']." ".$row['father_name'].",  к сожалению вы не сдали зачёт.  " .$d."</p><center><img src='pic/test_out.png'></center>  <br/> Повторите следующие темы:<br/> <br/>".
-                $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br/>
+                $osh.". ". "<br/> <br/> Прочтите инструкции, нажав кнопку ниже, после чего попробуйте ещё раз пройти тест.<br><br><br>
                 <form  action='curs_edu01.php'>
             <center><input type='submit' value='Прочитать инструкции' class='table-form' /></center>
             </form>

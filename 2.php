@@ -5,7 +5,7 @@ include_once ("funk.php");
 
 $link=connect();
 
-if (isset ($_POST['space3']) && !isset($_POST['space2']) && !isset($_POST['space1']) && !isset($_POST['space4']) && !isset($_POST['space5']))
+if (isset ($_POST['space3']) && !isset($_POST['space2']) && !isset($_POST['space1']) && !isset($_POST['space4']) /*&& !isset($_POST['space5'])*/)
 {
     $q01="UPDATE `lama` SET `quest_01` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
 }
@@ -23,8 +23,11 @@ else
     $q02="UPDATE `lama` SET `quest_02` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];;
 }
 
+$q0="UPDATE `lama` SET `see` = '".$_POST['parol']."' WHERE `lama_id`=".$_SESSION['lama_id'];
+
 $res = $link->query($q01);
 $res = $link->query($q02);
+$res = $link->query($q0);
 ?>
 
 <!DOCTYPE HTML>
