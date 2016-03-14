@@ -22,6 +22,7 @@
         <option value="2015-12%">2015 Декабрь</option>
         <option value="2016-01%">2016 Январь</option>
         <option value="2016-02%">2016 Февраль</option>
+        <option value="2016-03%">2016 Март</option>
 
     </select><br><br>
     <input type="submit" value="Показать" class="table-form" /><br>
@@ -33,6 +34,7 @@
     if ($_POST['place']==='2015-12%'){$data='Декабрь 2015г.';}
     else if ($_POST['place']==='2016-01%'){$data='Январь 2016г.';}
     else if ($_POST['place']==='2016-02%'){$data='Февраль 2016г.';}
+    else if ($_POST['place']==='2016-03%'){$data='Март 2016г.';}
     else if ($_POST['place']==='2015-11%'){$data='Ноябрь 2015г.';}
     else {};
 

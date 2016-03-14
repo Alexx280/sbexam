@@ -44,7 +44,7 @@ $res = $link->query($q0);
         <input id="em3" class="checkbox" type="checkbox" name="email3" value="0" />
         <label for="em3">Отправка файлов-программ, а также аудио- и видео-роликов</label> <br>
         <input id="em4" class="checkbox" type="checkbox" name="email4" value="0" />
-        <label for="em4">Использовать электронную почту коллкг от своего имени</label> <br>
+        <label for="em4">Использовать электронную почту коллег от своего имени</label> <br>
         <!--<input id="em5" class="checkbox" type="checkbox" name="email5" value="1" />
         <label for="em5">Рассылать объявления поздравительного характера в пределах отдела</label> <br>-->
         <input id="em6" class="checkbox" type="checkbox" name="email6" value="1" />

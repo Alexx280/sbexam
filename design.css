@@ -9,6 +9,7 @@ html, body {
 }
 body{
     background-image:url(pic/Logo.jpg);
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     color: #ffffff;
