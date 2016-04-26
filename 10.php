@@ -3,7 +3,7 @@ session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
 $link=connect();
-
+/*
 if (isset ($_POST['s4']) && !isset($_POST['s1']) && !isset($_POST['s2']) && !isset($_POST['s3']) && !isset($_POST['s5'])
 )
 {
@@ -12,9 +12,9 @@ if (isset ($_POST['s4']) && !isset($_POST['s1']) && !isset($_POST['s2']) && !iss
 else
 {
     $q10="UPDATE `lama` SET `quest_12` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-
-$res = $link->query($q10);
+}*/
+$q="UPDATE `lama` SET `quest_12` = '".$_POST['s']."' WHERE `lama_id`=".$_SESSION['lama_id'];
+$res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>

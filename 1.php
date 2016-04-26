@@ -11,13 +11,13 @@ include_once "funk.php";
         <p class="tq"> 1. Требования к паролю.</p><br>
         <form method="post" action="2.php">
             А. Какие комбинации символов из перечисленных ниже допустимо использовать в качестве пароля:<br><br>
-            <input id="ch1" class="checkbox" type="checkbox" name="space1" value="0" />
+            <input id="ch1" class="checkbox" type="radio" name="space" value="0" />
             <label for="ch1">12358934</label><br>
-            <input id="ch2" class="checkbox" type="checkbox" name="space2" value="0" />
+            <input id="ch2" class="checkbox" type="radio" name="space" value="0" />
             <label for="ch2">password</label> <br>
-            <input id="ch3" class="checkbox" type="checkbox" name="space3" value="1" />
+            <input id="ch3" class="checkbox" type="radio" name="space" value="1" />
             <label for="ch3">!345tyFDD</label> <br>
-            <input id="ch4" class="checkbox" type="checkbox" name="space4" value="0" />
+            <input id="ch4" class="checkbox" type="radio" name="space" value="0" />
             <label for="ch4">Егор123</label>  <br>
            <!-- <input id="ch5" class="checkbox" type="checkbox" name="space5" value="1" />
             <label for="ch5">радуга</label> <br> -->
@@ -25,13 +25,13 @@ include_once "funk.php";
 
             Б.	Как верно сменить пароль, когда закончился его срок действия? <br>
 
-            <input id="but1" class="checkbox" type="checkbox" name="button1" value="0" />
+            <input id="but1" class="checkbox" type="radio" name="button" value="0" />
             <label for="but1">Сообщить системным администраторам, чтобы сменили пароль</label><br>
-            <input id="but2" class="checkbox" type="checkbox" name="button2" value="1" />
+            <input id="but2" class="checkbox" type="radio" name="button" value="1" />
             <label for="but2">Нажать Ctrl+Alt+Del, нажать сменить пароль, ввести старый пароль, ввести новый пароль 2 раза</label><br>
-            <input id="but3" class="checkbox" type="checkbox" name="button3" value="0" />
+            <input id="but3" class="checkbox" type="radio" name="button" value="0" />
             <label for="but3">Нажать Ctrl+Shift+Del, нажать сменить пароль, ввести старый пароль, ввести новый пароль 2 раза</label><br>
-            <input id="but4" class="checkbox" type="checkbox" name="button4" value="0" />
+            <input id="but4" class="checkbox" type="radio" name="button" value="0" />
             <label for="but4">Нажать Ctrl+Alt+Del, нажать сменить пароль, попросить администраторам сети сменить пароль</label><br>
              <br>
 
