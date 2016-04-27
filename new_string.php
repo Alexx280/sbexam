@@ -8,11 +8,12 @@ $link=connect();
 /*внесение пользователя в базу*/
 
 if($_POST['parol-na']=='gigabite8srx') {
-    $login = "INSERT INTO `lama` (`family`, `name`,`code`)
-    VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";
+    $login = "INSERT INTO `lama` (`family`, `name`,`code`,`login`,`password`)
+    VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "','" . $_POST['login'] . "','" . $_POST['password'] . "')";
 
     if ($_POST['family'] != '') {
         $res = $link->query($login);
+
     } else { };
 }
 else {};
@@ -66,14 +67,34 @@ else {};
             Фамилия:<br>
             <input type="text" id="fa" name="family" size="30" required="required" ><br>
             Имя:<br>
-            <input type="text" id="na" name="name" size="30" required="required" ><br><br>
-            <input type="password" id="na" name="parol-na" size="10" required="required"  ><br>
+            <input type="text" id="na" name="name" size="30" required="required" ><br>
+            Логин:<br>
+            <input type="text" id="lo" name="login" size="30" ><br>
+            Пароль:<br>
+            <input type="text" id="pa" name="password" size="30"  ><br><br>
+
+            <input type="password" id="par-na" name="parol-na" size="10" required="required"  ><br>
 
             <br>
             <input type="submit" value="Внести в базу" class="table-form"/>
 
         </form>
-        </br>
+        <?php
+        if ($_POST['family'] != '') {
+            echo ('<br>');
+            $input = "SELECT * FROM `lama` WHERE `family` = '" . $_POST['family'] . "'";
+            $res = $link->query($input);
+            while ($row = $res->fetch_assoc()) {
+                foreach ($row as $key => $val) {
+                    if ($key == 'family' || $key == 'name' || $key == 'zachet' || $key == 'code') {
+                        echo ("$val\n");
+                    }
+                }
+                echo ('<br>');
+            }
+        } else {};
+        ?>
+        <br>
         <form method="post" action="test.php">
             <input type="submit" value="Тестирование" class="table-form"/>
             </br>
