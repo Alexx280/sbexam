@@ -64,7 +64,7 @@ for ($i = 1; $i <= 52; $i++) {
 }
 $pass=0;
 if($chisla >0 && $simvoly>0 && $kiril>0 && count($password)>7){$pass =1;}else{};
-echo "Pass=".$pass."вот";
+/*echo "Pass=".$pass."вот";
 /* Конец Проверка введённого пороля на соответстие*/
 
 
