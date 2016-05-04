@@ -73,11 +73,11 @@
                         <input type="submit" value="Начать тест" class="table-form" />
 
                     </form>
-                <div>
+                <!--<div>
                     <form method="post" action="index.php">
                         <button type="submit" class="table-form"> На главную </button>
                     </form>
-                </div>
+                </div>-->
 
             </div>
         </div>

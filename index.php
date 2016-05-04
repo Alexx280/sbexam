@@ -28,7 +28,7 @@ include_once 'head_edu.tpl';
     <p class="animated flipInX te "> ГК "ЛАМА" </p>
 
     <div class="butt1">
-        <a href="test.php">
+        <a href="index2.php">
             <button type="button" class="btn btn-success btn-lg btn3d" style="width: 135px"> <span class="glyphicon glyphicon-ok"></span>  Тест  </button>
         </a>
     </div>

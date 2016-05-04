@@ -27,17 +27,14 @@ if (isset($_SESSION['lama_id'])){
         <div id="centr-w">
             <div id="centr">
                 <p class="tc"> Добрый день, '.$_POST['name'].'  '.$_POST['father_name'].' .<br>
-                Для успешной сдачи зачёта необходимо ответить правильно <br> минимум на 7 из 10 вопросов.<br>
-                В каждом вопросе может быть несколько ответов.<br>
-                Вернуться на предыдущитй вопрос будет невозможно.<br>
-                На каждый вопроc выделено по 2 минуты<br>
+                Будте внимательны при чтении вопросов и ответов<br>
                 <br><br></p>
                 <form method="post" action="1.php">
                     <input type="submit" value="Вперёд" class="table-form"/>
                 </form><br>
-                <form method="post" action="curs_edu19.php"></p>
+                <!--<form method="post" action="curs_edu19.php"></p>
                     <input type="submit" value="Почитать инструкции" class="table-form" />
-                </form>
+                </form>-->
             </div>
         </div>
         ');

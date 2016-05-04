@@ -23,20 +23,20 @@ include_once 'head_edu.tpl';
 </head>
 
 <div id="edu" class="tada">
-    <p class="animated flipInX te "> Информационная безопасность </p>
-    <p class="animated flipInX te "> в корпоративной компьютерной сети </p>
-    <p class="animated flipInX te "> ГК "ЛАМА" </p>
-
-    <div class="butt1">
-        <a href="test.php">
-            <button type="button" class="btn btn-success btn-lg btn3d" style="width: 135px"> <span class="glyphicon glyphicon-ok"></span>  Тест  </button>
-        </a>
-    </div>
-    <div class="butt2">
-        <a href="curs_edu19.php">
-            <button type="button" class="btn btn-success btn-lg btn3d">Инструкции</button>
-        </a>
-    </div>
+    <p class="tf">
+        Для успешной сдачи зачёта необходимо ответить  <br>правильно минимум на 7 из 10 вопросов.<br>
+        В каждом вопросе может быть несколько ответов.<br>
+        Вернуться на предыдущитй вопрос будет невозможно.<br>
+        На каждый вопроc выделено по 2 минуты<br>
+        <br><br></p>
+    <center>
+    <form method="post" action="test.php">
+        <input type="submit" value="Вперёд" class="table-form"/>
+    </form><br>
+    <form method="post" action="curs_edu19.php">
+        <input type="submit" value="Почитать инструкции" class="table-form" />
+    </form>
+    </center>
     <!--
     <div class="butt4">
         <a href="curs_edu19.php">
