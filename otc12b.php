@@ -18,8 +18,8 @@
 
     <select name="place" style="width: 244px">
         <option value="">Выберите из списка</option>
-        <option value="2015-11%">2015 Ноябрь</option>
-        <option value="2015-12%">2015 Декабрь</option>
+        <option value="2016-04%">2016 Апрель</option>
+        <option value="2016-05%">2016 Май</option>
         <option value="2016-01%">2016 Январь</option>
         <option value="2016-02%">2016 Февраль</option>
         <option value="2016-03%">2016 Март</option>
@@ -31,11 +31,11 @@
 <script>debugger;</script>
 <?php
     include_once ("funk.php");
-    if ($_POST['place']==='2015-12%'){$data='Декабрь 2015г.';}
+    if ($_POST['place']==='2016-05%'){$data='Май 2016г.';}
     else if ($_POST['place']==='2016-01%'){$data='Январь 2016г.';}
     else if ($_POST['place']==='2016-02%'){$data='Февраль 2016г.';}
     else if ($_POST['place']==='2016-03%'){$data='Март 2016г.';}
-    else if ($_POST['place']==='2015-11%'){$data='Ноябрь 2015г.';}
+    else if ($_POST['place']==='2016-04%'){$data='Апрель 2016г.';}
     else {};
 
     echo ('<b>Места инструктирования сотрудников за  '.$data.' </b><br>');
@@ -43,6 +43,8 @@
     $names[1]="ТЦ Мармелайт";
     $names[2]="Офис на ул.Ленина";
     $names[3]="ТЦ Мирамикс";
+    $names[4]="ТЦ Изумрудный город";
+    $names[5]="Офис на ул.Карташова";
         function print_table ($name_place){
             echo('<table border="2"><tr ><th colspan="3">'.$name_place .'</th></tr>');
 
@@ -68,7 +70,7 @@
             echo('</table><br>');
         }
     $i=0;
-    while ($i <4 ) {
+    while ($i <=5 ) {
         print_table($names[$i]);
         $i=$i+1;
 
@@ -76,7 +78,7 @@
 ?>
 
 <?php
-echo ('hello');
+//echo ('hello');
 $list = array (
     array('aaa', 'bbb', 'ccc', 'dddd'),
     array('123', '456', '789'),
