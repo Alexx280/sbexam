@@ -33,7 +33,7 @@ $res = $link->query($q03);
         <input id="pc4" class="checkbox" type="checkbox" name="pc4" value="0" />
         <label for="pc4">Могу отремонтировать компьютерную технику, если мне понятна причина поломки</label> <br>
         <input id="pc5" class="checkbox" type="checkbox" name="pc5" value="1" />
-        <label for="pc5">Рабочую станцию можно не блокировать если нужно выйти из кабинета в течении дня </label> <br>
+        <label for="pc5">Рабочую станцию можно не блокировать если нужно сходить на совещание или обед </label> <br>
         <input id="pc6" class="checkbox" type="checkbox" name="pc6" value="1" />
         <label for="pc6">Не следует допускать к работе за рабочей станцией сотрудников других подразделений с их индивидуальным паролем</label> <br>
         <input id="pc7" class="checkbox" type="checkbox" name="pc7" value="1" />
