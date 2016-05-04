@@ -46,7 +46,7 @@ $res = $link->query($q);
                     <option value="Нет">Это не регламентируется</option>
                     <option value="Нет">Нет верного варианта</option>
                 </select><br><br>
-                Неправомерный поиск информации по компьютерной сети:
+                <!--Неправомерный поиск информации по компьютерной сети:
                 <select name="law3" style="width: 244px text-align: center">
                     <option value="Нет">Выберите из списка</option>
                     <option value="Нет">Уголовной кодекс РФ</option>
@@ -65,7 +65,8 @@ $res = $link->query($q);
                     <option value="Нет">Внутренние документы компании</option>
                     <option value="Нет">Это не регламентируется</option>
                     <option value="Нет">Нет верного варианта</option>
-                </select><br><br>
+                </select><br><br>-->
+                <br><br><br><br><br>
                 <br><br><br><br><br>
                 <div style="text-align: center;">
                     <input type="submit" value="Дальше" class="table-form"/><br>

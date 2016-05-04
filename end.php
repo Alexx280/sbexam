@@ -69,7 +69,7 @@ echo "Pass=".$pass."вот";
 
 
 /*Проверка правильности ответов о регламентирующих документах*/
-if($row['law1']=='Да' && $row['law2']=='Да' && $row['law3']=='Да' && $row['law4']=='Да') {
+if($row['law1']=='Да' && $row['law2']=='Да') {
     $q11="UPDATE `lama` SET `quest_10` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
 }
 else
