@@ -118,7 +118,7 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10.$ssd11),0 ,-
 
     if ($zachet > 8) {
         /*Ответы правильные, есть пароль*/
-        if($row['login']!== NULL && $row['login']!== '') {
+        if($row['login']!== NULL && $row['login']!== ' ') {
             $zachet_ok = "UPDATE `lama` SET `zachet` = 'Зачёт' WHERE `lama_id`=" . $_SESSION['lama_id'];
             $res = $link->query($zachet_ok);
             $code = "UPDATE `lama` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['lama_id'];

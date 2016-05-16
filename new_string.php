@@ -8,8 +8,14 @@ $link=connect();
 /*внесение пользователя в базу*/
 
 if($_POST['parol-na']=='gigabite8srx') {
-    $login = "INSERT INTO `lama` (`family`, `name`,`code`,`login`,`password`)
+    if ($_POST['login']!== '') {
+        $login = "INSERT INTO `lama` (`family`, `name`,`code`,`login`,`password`)
     VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "','" . $_POST['login'] . "','" . $_POST['password'] . "')";
+    }
+    else {
+        $login = "INSERT INTO `lama` (`family`, `name`,`code`)
+    VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";
+    }
 
     if ($_POST['family'] != '') {
         $res = $link->query($login);
