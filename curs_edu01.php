@@ -37,7 +37,7 @@ include_once 'head_edu.tpl';
     </a>
     </div>
     <div class="butt3" id="win1">
-        <a href="#">
+        <a href="index.php">
             <button type="button" id="win" class="btn btn-danger btn-lg btn3d" title="Перейти на начальную страницу" onclick='messageShow()'><span class="glyphicon glyphicon-remove"></span></button>
         </a>
     </div>
