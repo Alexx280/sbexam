@@ -67,7 +67,7 @@ $res = $link->query($q);
                     <option value="Нет">Нет верного варианта</option>
                 </select><br><br>-->
                 <br><br><br><br><br>
-                <br><br><br><br><br>
+                <br><br><br><br>
                 <div style="text-align: center;">
                     <input type="submit" value="Дальше" class="table-form"/><br>
                 </div>

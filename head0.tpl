@@ -15,9 +15,12 @@
     <div class="content">
 
         <div id='centr-w'>
-            <div id='inner'>
+            <br>
+            <br>
+            <br>
+            <!--<div id='inner'>
                 <p> Проверка знаний инструкций по информационной безопасности сотрудников ГК Лама </p>
-            </div>
+            </div>-->
             <div id='centr' >
                     <form method="post" action="inter.php" >
                         Фамилия:<br>
@@ -27,8 +30,8 @@
                         Отчество:<br>
                         <input type="text" id="fn" name="father_name" size="30" required="required" ><br>
                         Паспорт<br>
-                        Серия:  <input type="text" id="ps" name="pasp_s" size="4" required="required">
-                        Номер:  <input type="text" id="pn" name="pasp_n" size="6" required="required"<br><br>
+                        Серия  <input type="text" id="ps" name="pasp_s" size="4" required="required">
+                        Номер  <input type="text" id="pn" name="pasp_n" size="6" required="required"<br><br>
                         Организация (Юр.лицо):<br>
 
                         <select name="factory" style="width: 244px">
