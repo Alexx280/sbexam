@@ -182,7 +182,7 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10.$ssd11),0 ,-
             <center><input type='submit' value='Прочитать инструкции' class='table-form' /></center>
             </form>
             </div> </div>");
-            unset ($_SESSION['lama_id']);
+            //unset ($_SESSION['lama_id']);
         };
     }
 /*Конец Вывод результата на экран в зависимоости от ответов*/
