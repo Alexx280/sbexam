@@ -40,17 +40,18 @@
             <option value="Терминал Групп ООО">"Терминал Групп" ООО</option>
             <option value="УК Лама ООО">"УК Лама" ООО</option>
             <option value="ТомРитэйл ООО">"ТомРитэйл" ООО</option>
+            <option value="ЕвроЛогистик ООО">"ЕвроЛогистик" ООО</option>
             <option value="Централизованная Бухгалтерия ООО">"Централизованная  Бухгалтерия" </option>
             <option value="УК Изумрудный город ООО">"УК "Изумрудный город" ООО</option>
         </select><br>
 
         Должность:<br>
         <input type="text" name="job" id="jo" size="30" required="required" ></br>
-        Руководитель:</br>
+        Руководитель:<br>
         <input type="text" name="boss" id="bo" size="30" required="required" placeholder="Фамилия И.О."></br>
-        Код:</br>
+        Код:<br>
         <input type="text" name="code" id="co" size="30" required="required" placeholder="0000" title="Код получите у специалиста по безопасности"></br>
-        </br>
+        <br>
         <input type="submit" value="Начать тест" class="table-form" />
         <div id="timer"></div>
     </form>
