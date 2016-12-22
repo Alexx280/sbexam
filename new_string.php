@@ -7,7 +7,7 @@ $login="";
 $link=connect();
 /*внесение пользователя в базу*/
 
-if($_POST['parol-na']=='gigabite8srx') {
+if($_POST['parol-na']=='1') {
     if ($_POST['login']!== '') {
         $login = "INSERT INTO `lama` (`family`, `name`,`code`,`login`,`password`)
     VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "','" . $_POST['login'] . "','" . $_POST['password'] . "')";
@@ -26,7 +26,7 @@ else {};
 //echo ($_POST['date_input']);
 
 /*проверка наличия сотрудника в базе*/
-if($_POST['parol']=='gigabite8srx') {
+if($_POST['parol']=='1') {
     $input = "SELECT * FROM `lama` WHERE `family` = '" . $_POST['fam'] . "'";
 
 //if ($_POST['fam'] != '') {

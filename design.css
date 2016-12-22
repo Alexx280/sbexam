@@ -151,7 +151,15 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     top:180px;
+
 }
+/*#centr > form > input
+{color: black}
+
+#centr > form > input > select > option
+{color: black;
+text-decoration-color: #080808}*/
+
 #centr > div {
     margin-top: 10px
 }
@@ -189,6 +197,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size:1.3em;
 }
+/*#shest {
+    -moz-appearance: textfield;
+}
+#shest::-webkit-inner-spin-button {
+    display: none;
+}*/
 
 /*расположение рисунков в учебной части*/
 .leftimg {
@@ -427,6 +441,11 @@ body{
 .checkbox:checked + label:after {
     left: 26px;
 }
+/* Показываем получение фокуса.
+.checkbox:focus + label:before {
+    /*box-shadow: 0 0 0 3px rgba(255,255,0,.5);}*/
+
+
 /* комментарии в учебной части */
 .comment + label,
 .comment2 + label,
@@ -523,6 +542,15 @@ body{
     z-index: 2;
     color: white;
 }
+/*
+.strings-edu {
+    position: absolute;
+    top: 93%;
+    left: 46%;
+    z-index: 2;
+    color: white;
+}
+*/
 
 .ui-draggable
 {

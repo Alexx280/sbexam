@@ -7,13 +7,12 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/old/composer.phar" />
+          <root url="phar://$MODULE_DIR$/composer.phar" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/old/composer.phar" />
+          <root url="phar://$MODULE_DIR$/composer.phar" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
   </component>
 </module>

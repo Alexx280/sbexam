@@ -4,25 +4,7 @@ include_once 'head.tpl';
 include_once ("funk.php");
 
 $link=connect();
-/*
-if (isset ($_POST['space3']) && !isset($_POST['space2']) && !isset($_POST['space1']) && !isset($_POST['space4']) && !isset($_POST['space5']))
-{
-    $q01="UPDATE `lama` SET `quest_01` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-else
-{
-    $q01="UPDATE `lama` SET `quest_01` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];;
-}
 
-if (isset ($_POST['button2']) && !isset($_POST['button1']) && !isset($_POST['button3']) && !isset($_POST['button4']))
-{
-    $q02="UPDATE `lama` SET `quest_02` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];;
-}
-else
-{
-    $q02="UPDATE `lama` SET `quest_02` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];;
-}
-*/
 $q0="UPDATE `lama` SET `see` = '".$_POST['parol']."' WHERE `lama_id`=".$_SESSION['lama_id'];
 $q1="UPDATE `lama` SET `quest_01` = '".$_POST['space']."' WHERE `lama_id`=".$_SESSION['lama_id'];
 $q2="UPDATE `lama` SET `quest_02` = '".$_POST['button']."' WHERE `lama_id`=".$_SESSION['lama_id'];
