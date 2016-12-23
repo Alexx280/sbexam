@@ -49,9 +49,4 @@ $res = $link->query($q03);
     <div class="strings"><p>3/10</p></div>
 </div>
 </div>
-<!--<a href="4.php">
-    <div class="knopka3 ">
-        <p>Далее</p>
-    </div>
-</a>-->
 </html>

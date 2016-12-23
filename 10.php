@@ -77,10 +77,5 @@ $res = $link->query($q);
         <div class="strings"><p>10/10</p></div>
     </div>
 </div>
-<!--   <a href="end.php">
-       <div class="knopka3 ">
-           <p>Далее</p>
-       </div>
-   </a>-->
 
 </html>
