@@ -40,15 +40,9 @@ $res = $link->query($q0);
         <br>
         <br>
         <br>
-
         <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
          </form>
     <div class="strings"><p>2/10</p></div>
 </div>
 </div>
-<!--<a href="3.php">
-    <div class="knopka3 ">
-        <p>Далее</p>
-    </div>
-</a>-->
 </html>
