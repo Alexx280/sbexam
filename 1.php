@@ -68,10 +68,7 @@ $res = $link->query($q12);
         </form>
 
         <div class="strings"><p>1/10</p></div>
-        <!--<div class="progress top-bar" >
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="10" style="width:12.5%">
-                12.5%
-            </div>-->
+
     </div>
 </div>
 </html>
