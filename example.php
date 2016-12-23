@@ -115,7 +115,3 @@ $result = array_diff($array1[0], $array2[0]);
 
 
 ?>
-<!--
-<h1>Upload</h1>
-<form method="post" enctype="multipart/form-data">
-    *.XLSX <input type="file" name="file"  />&nbsp;&nbsp;<input type="submit" value="Pa
