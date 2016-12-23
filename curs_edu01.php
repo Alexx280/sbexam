@@ -67,7 +67,7 @@ include_once 'head_edu.tpl';
 */
 </script>
 <?php
-
+function (){};
 ?>
 
 </html>
