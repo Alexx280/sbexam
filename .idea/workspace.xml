@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3503b726-f9a0-4f71-84bc-f5dbe7ba6775" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\OpenServer\domains\localhost\sbexam\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\OpenServer\domains\localhost\sbexam\composer.phar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Lama.iml" afterPath="$PROJECT_DIR$/.idea/Lama.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curs_edu01.php" afterPath="$PROJECT_DIR$/curs_edu01.php" />
     </list>
     <ignored path="Lama.iws" />
     <ignored path=".idea/workspace.xml" />
